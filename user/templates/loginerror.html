@@ -1,0 +1,35 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <link rel="stylesheet" href="{% static 'css/permissionerror.css' %}" />
+  <title>Error!</title>
+</head>
+
+<body>
+
+  <div class="container">
+    <div class="content">
+      <div class="image__block">
+        <img class="image" src="{% static 'img/Error.jpg' %}" alt="">
+      </div>
+      <div class="text__block">
+        <div class="tittle">
+          Oops!
+        </div>
+        <p class="text">
+          Invalid login details given!
+        </p>
+      </div>
+    </div>
+      <div class="btn">
+        <a href="/" class="neon__btn">Home</a>
+      </div>
+  </div>
+
+</body>
+
+</html>

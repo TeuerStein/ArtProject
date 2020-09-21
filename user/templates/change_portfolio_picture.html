@@ -1,0 +1,37 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8">
+		<meta name="viewport" content="width=`, initial-scale=1.0">
+		<link rel="stylesheet" href="{% static 'css/login_style.css' %}">
+		<title>ArtProject</title>
+	</head>
+
+	<body>
+
+		<form enctype="multipart/form-data" method="POST" class="form">
+			{% csrf_token %}
+
+			<h1 class="form-title">Change Profile Picture</h1>
+
+      <div class="form-pic">
+        <label class="form-table">Profile picture:</label>
+        <input type="file" name="portfolio_picture" accept="image/*" required id="id_portfolio_picture" style="margin-bottom:25px;">
+      </div>
+
+			<input type="submit" name="" value="Change" class="form-button">
+
+      {% for message in messages %}
+      	<h3 class="form_massage">{{ message }}</h3>
+    	{% endfor %}
+
+		</form>
+
+
+
+	</body>
+
+</html>

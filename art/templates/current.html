@@ -1,0 +1,63 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <title>{{ current_object.name }}</title>
+    <link rel="stylesheet" href="{% static 'css/main_blocks/current_object.css' %}">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Comfortaa">
+  </head>
+  <body>
+    <div class="container">
+
+      <a href="/" class="home-button">Main Page</a>
+
+      <header class="header">
+        <img class="header_img" src="{{ current_object.img.url }}">
+      </header>
+
+      <article class="content">
+        <div class="content_all-info">
+          <h1 class="all_info_title">Story about this art</h1>
+          <p class="all_info-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+          <p class="all_info-text">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</p>
+          <p class="all_info-text">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.</p>
+          <p class="all_info-text">Nullam posuere varius fermentum. Curabitur bibendum posuere convallis. Aenean fringilla, leo non laoreet malesuada, nibh libero finibus orci, quis pharetra justo nisi eu ex. Suspendisse nec ligula aliquet justo euismod gravida. Donec ullamcorper posuere laoreet. Cras ex neque, tincidunt nec gravida ut, mattis at odio. Praesent volutpat iaculis interdum. Maecenas pellentesque rutrum vehicula.</p>
+          <p class="all_info-text">Aenean ut gravida neque, nec volutpat felis. Nunc iaculis a arcu eu blandit. Aliquam ante ligula, malesuada tempor diam eleifend, egestas iaculis odio. Quisque tempor sapien id luctus imperdiet. Nulla dui massa, commodo eget augue sit amet, semper mollis ligula. Nunc efficitur porttitor interdum. Etiam nec augue vitae turpis pharetra mattis. Suspendisse sodales maximus posuere. Nulla tincidunt neque sit amet magna viverra, eget sollicitudin lorem interdum.</p>
+          <p class="all_info-text">Suspendisse euismod nunc vitae arcu lobortis, et aliquam nisi convallis. Nulla fermentum eros in nibh mollis, a dignissim lorem interdum. Aenean non magna euismod, rhoncus enim iaculis, tristique lectus. Curabitur efficitur purus posuere urna blandit, at finibus massa condimentum. Nam est libero, laoreet ut tempor eu, convallis eget lacus. Praesent elementum vulputate maximus. Proin in pharetra velit. Ut sodales sapien dictum feugiat tempor. Morbi tristique orci sit amet orci elementum varius. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Morbi auctor sapien eget felis porttitor, at aliquet nulla pretium. Integer vel lobortis mauris. Proin volutpat ligula nec turpis consequat, eu mollis sem suscipit. Ut nec commodo nulla, ut egestas arcu. Donec quis semper leo.</p>
+          <p class="all_info-text">Morbi accumsan magna eget lacinia tincidunt. Quisque pretium malesuada erat ut commodo. Aenean scelerisque finibus urna non tempus. Fusce quis diam sed purus finibus bibendum eu vel nibh. Mauris eleifend ligula venenatis pretium varius. Donec tincidunt vel diam dictum posuere. Donec mollis sapien ac condimentum consequat. Etiam elementum enim vitae magna tincidunt, sed viverra tortor blandit. Nulla nisl nisi, sollicitudin sed sagittis at, ornare at mi. Donec a pulvinar magna, ac lacinia erat. Ut ut ligula risus.</p>
+        </div>
+
+        <div class="content_short-info">
+          <h1>{{ current_object.name }}</h1>
+          <div class="short-info_about">
+            <p>Size:</p>
+            <p>Lorem Ipsum</p>
+
+            <p>Type:</p>
+            <p>Lorem Ipsum</p>
+
+            <p>From 'World':</p>
+            <p>Lorem Ipsum</p>
+          </div>
+          {% if user.is_authenticated %}
+            <a class="short-info_download-object" href="{{ current_object.img.url }}">Link for Download</a>
+          {% else %}
+            <p>For download the picture you have to be a logged in</p>
+            <a class="short-info_download-object" href="/login/">Login</a>
+          {% endif %}
+
+          {% if user.is_staff %}
+            <a class="short-info_delete-object" href="/art/delete/{{ current_object.pk }}/">Delete object</a>
+          {% endif %}
+        </div>
+      </article>
+
+      <footer class="footer">
+
+      </footer>
+
+    </div>
+  </body>
+</html>

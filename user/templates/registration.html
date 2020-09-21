@@ -1,0 +1,56 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+    integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+    crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="{% static 'css/registration_style.css' %}">
+  <title>Register form</title>
+</head>
+
+<body>
+
+  <form enctype="multipart/form-data" method="POST" class="form">
+    {% csrf_token %}
+
+    <h1 class="form-title">Registration</h1>
+
+    <div class="form-group">
+      <input type="text" name="username" required class="form-input" placeholder=" " id="id_username">
+      <label class="form-lable">Username</label>
+    </div>
+
+    <div class="form-group">
+      <input type="password" name="password" required class="form-input" placeholder=" " id="id_password">
+      <label class="form-lable">Password</label>
+    </div>
+
+    <div class="form-group">
+      <input type="email" name="email" class="form-input" placeholder=" " id="id_email">
+      <label class="form-lable">Email</label>
+    </div>
+
+    <div class="form-group">
+      <input type="url" name="portfolio_page" class="form-input" placeholder=" " id="id_portfolio_page">
+      <label class="form-lable">Portfolio page</label>
+    </div>
+
+    <div class="form-pic">
+      <label class="form-table">Profile picture:</label>
+      <input type="file" name="portfolio_picture" accept="image/*" id="id_portfolio_picture" style="margin-bottom:25px;">
+    </div>
+
+    <button type="submit" name="" value="Register" class="form-button" style="margin-bottom: 25px;">Create</button>
+
+    <a href="/" class="form-button" style="text-decoration:none; text-align:center;">Main Page</a>
+
+  </form>
+</body>
+
+</html>

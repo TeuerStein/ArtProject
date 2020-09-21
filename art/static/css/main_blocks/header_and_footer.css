@@ -1,0 +1,74 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: #DDDDDD;
+}
+
+.container{
+    width: 100%;
+    font-family: 'Comfortaa', cursive;
+}
+
+
+/* HEADER */
+
+.header{
+    width: 88%;
+    min-height:120px;
+    font-size: 1.8em;
+    padding-left: 6%;
+    padding-right: 6%;
+    margin-bottom: 50px;
+    box-shadow: 0 0 10px #67E667, 0 0 10px #67E667;
+
+    background-color: #67E667;
+}
+
+.header_block-logo{
+    width: 20%;
+    min-height: 120px;
+
+    float: left;
+    display: grid;
+}
+
+.header_link{
+    width: 18%;
+    min-height: 50px;
+
+    place-self: center;
+    align-self: center;
+}
+
+.link_img{
+    width: 100%;
+    min-height: 40px;
+}
+
+.header_block-navigation-bar{
+    width: 50%;
+    min-height: 120px;
+
+    float: right;
+    display: grid;
+    align-content: center;
+}
+
+.header_navigation{
+    width: 100%;
+    min-height: 80px;
+    font-size: 0.6em;
+
+    display: grid;
+    justify-content: space-evenly;
+    align-content: space-evenly;
+    grid-template-columns: auto auto auto;
+}
+
+.navigation_a{
+    text-decoration: none;
+    color: black; /* or you can use #008500; */
+}

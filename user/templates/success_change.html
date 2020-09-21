@@ -1,0 +1,29 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <link rel="stylesheet" href="{% static 'css/success_change.css' %}" />
+  <title>Successful created a new password</title>
+</head>
+
+  <body>
+  <div class="container">
+    <div class="content">
+        <img class="image" src="{% static 'img/Success.svg' %}" alt="Success">
+      <div class="text__block">
+        <div class="tittle">Success!</div>
+        <p class="sub__tittle">
+          Your info has been successfully changed ;-)
+        </p>
+      </div>
+      <div class="button">
+        <a href="/personalpage/" class="button__home">Home</a>
+      </div>
+    </div>
+  </div>
+  </body>
+
+</html>

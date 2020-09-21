@@ -1,0 +1,96 @@
+/* CONTENT */
+
+.content{
+  width: 88%;
+  padding-left: 6%;
+  padding-right: 6%;
+}
+
+.content_image{
+  width: 20%;
+  box-shadow: 0 0 10px silver, 0 0 10px silver;
+
+  float: left;
+}
+
+.content_username{
+  font-size: 2.2em;
+  margin-bottom: 50px;
+
+  text-align: center;
+}
+
+.span_username{
+  color: rgb(20, 100, 20);
+  transition: 300ms;
+  font-size: 1.4em;
+}
+
+.span_username:hover{
+  color: rgb(20, 180, 20);
+  transition: 300ms;
+  font-size: 1.4em;
+}
+
+.content_main{
+  width: 40%;
+  padding-left: 6%;
+  padding-right: 6%;
+  font-size: 1.5em;
+
+  display: grid;
+  justify-content: space-between;
+  align-content: start;
+  grid-template-columns: auto auto;
+}
+
+.main_text-for-portfolio-page{
+  margin-bottom: 25px;
+}
+
+.main_email{
+  margin-bottom: 25px;
+}
+
+.main_portfolio-page{
+  margin-bottom: 25px;
+}
+
+.main_portfolio-page{
+  color: rgb(20, 100, 20);
+
+  text-decoration: none;
+}
+
+.main_portfolio-page:hover{
+  color: rgb(20, 180, 20);
+
+  text-decoration: none;
+}
+
+.content_control-buttons{
+  width: 100%;
+  height: 0 auto;
+  padding-top: 50px;
+
+  display: grid;
+  justify-content: space-between;
+  align-content: start;
+  grid-template-columns: auto auto auto auto auto;
+}
+
+.control-buttons_button{
+  font-size: 1.4em;
+  transition: 300ms;
+
+  text-decoration: none;
+  color: rgb(20, 180, 20);
+}
+
+.control-buttons_button:hover{
+  font-size: 1.4em;
+  transition: 300ms;
+
+  text-decoration: none;
+  color: rgb(20, 200, 20);
+}

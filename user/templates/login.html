@@ -1,0 +1,37 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8">
+		<meta name="viewport" content="width=`, initial-scale=1.0">
+		<link rel="stylesheet" href="{% static 'css/login_style.css' %}">
+		<title>Login form</title>
+	</head>
+
+	<body>
+
+		<form method="POST" class="form" action="{% url 'login' %}">
+			{% csrf_token %}
+
+			<h1 class="form-title">Login form</h1>
+
+			<div class="form-group">
+				<input type="text" name="username" class="form-input" placeholder=" ">
+				<label class="form-lable">Username</label>
+			</div>
+
+			<div class="form-group">
+				<input type="password" name="password" class="form-input" placeholder=" ">
+				<label class="form-lable">Password</label>
+			</div>
+
+			<input type="submit" name="" value="Login" class="form-button">
+
+			<a href="/" class="form-button" style="text-decoration:none; text-align:center;">Main Page</a>
+
+		</form>
+	</body>
+
+</html>

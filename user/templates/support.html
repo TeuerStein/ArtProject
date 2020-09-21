@@ -1,0 +1,40 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+        <head>
+            <meta http-equiv="content-type" content="text/html; charset=utf-8">
+            <title>ArtProject</title>
+            <link rel="stylesheet" href="{% static 'css/main_blocks/header_and_footer.css' %}">
+            <link rel="stylesheet" href="{% static 'css/main_blocks/sidebar_and_content.css' %}">
+            <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Comfortaa">
+        </head>
+        <body>
+            <div class="container">
+                <header class="header">
+                    <div class="header_block-logo">
+                        <a href="/" class="header_link"><img src="{% static 'img/logo.png' %}" class="link_img"></a>
+                    </div>
+
+                    <div class="header_block-navigation-bar">
+                      <nav class="header_navigation">
+                          <a href="/" class="navigation_a">Main</a>
+                          {% if user.is_authenticated %}
+                            {% if user.is_staff %}
+                              <a href="/add/" class="navigation_a">Add object</a>
+                              <a href="/admin/" class="navigation_a">Admin Panel</a>
+                            {% endif %}
+                            <a href="/personalpage/" class="navigation_a">Personal Page</a>
+                          {% else %}
+                            <a href="/login/" class="navigation_a">Log In</a>
+                            <a href="/registration/" class="navigation_a">Sing Up</a>
+                          {% endif %}
+                          <a href="/support/" class="navigation_a">Support</a>
+                      </nav>
+                    </div>
+                </header>
+
+                <h1 style="text-align: center;">If you have some problem write me - oleksandr.sokolov10010@gmail.com</h1>
+            </div>
+        </body>
+</html>

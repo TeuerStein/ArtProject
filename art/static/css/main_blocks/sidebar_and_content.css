@@ -1,0 +1,128 @@
+/* CONTENT */
+
+.content{
+    width: 68%;
+    height: 0 auto;
+    margin-left: 6%;
+    padding-bottom: 25px;
+
+    float: left;
+}
+
+
+/* Search line */
+
+.search_form{
+  width: 100%;
+  padding-bottom: 50px;
+
+  text-align: center;
+}
+
+.form_control{
+  width: 20%;
+  height: 150px;
+}
+
+/* Main Content */
+
+.content_all-objects{
+  width: 100%;
+  grid-column-gap: 2%;
+
+  display: grid;
+  justify-content: space-between;
+  align-content: start;
+  grid-template-columns: auto auto;
+}
+
+.all-objects_object-block{
+  margin-bottom: 25px;
+  box-shadow: 0 0 10px silver, 0 0 10px silver;
+
+  text-align: center;
+  background-color: #FFFFFF;
+  display: grid;
+  align-content: space-between;
+  grid-template-columns: auto;
+}
+
+.object-block_img{
+  width: 100%;
+  margin-bottom: 25px;
+}
+
+.object-block_title{
+  font-size: 1.9em;
+  margin-bottom: 10px;
+  transition: 300ms;
+
+  text-decoration: none;
+  color: black;
+}
+
+.object-block_title:hover{
+  font-size: 1.9em;
+  margin-bottom: 10px;
+  transition: 300ms;
+
+  text-decoration: none;
+  color: rgb(20, 180, 20);
+}
+
+/* Paginator */
+
+.pagination{
+  width: 100%;
+  font-size: 1.5em;
+
+  text-align: center;
+}
+
+.step-links_link{
+  color: rgb(20, 100, 20);
+  transition: 300ms;
+
+  text-decoration: none;
+}
+
+.step-links_link:hover{
+  color: rgb(20, 180, 20);
+  transition: 300ms;
+
+  text-decoration: none;
+}
+
+
+/* SIDEBAR */
+
+.sidebar{
+    width: 19%;
+    height: 1420px;
+    margin-right: 6%;
+    margin-bottom: 50px;
+
+    float: right;
+    display: grid;
+    grid-template-columns: auto;
+    align-content: space-between;
+}
+
+.sidebar_block{
+    width: 100%;
+    height: 700px;
+    box-shadow: 0 0 10px silver, 0 0 10px silver;
+
+    background-color: #FFFFFF;
+    float: right;
+    display: grid;
+    align-content: center;
+}
+
+.block_h1{
+  width: 100%;
+  height: 0 auto;
+  transform: rotate(90deg);
+
+  text-align: center;
+}
